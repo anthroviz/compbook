@@ -8,7 +8,41 @@ permalink: /notes/
 
 # Design : Technology :: Art : Biology
 
-Utopia, legacies
+1. Visualizing Human Narratives - Design : Technology :: Art : Biology
+2. Visualizing Human Narratives
+3. Anthroviz
+4. A [...] Z
+5. A-Z
+
+at previous points in my Gallatin career I thought about Utopia, legacies
+
+Stories we tell ourselves and each other - how do we reify our sentience and experience? Special focus on literal visual depictions, but all kinds of media will be considered. Dynamic systems over static (time series over cross sections/samples)
+
+How to group data and ideas. Looking at the bigger picture. Especially social constructs and relationships
+
+- families, sex partners, feminism, technology, avoiding the singularity
+- origins (of humanity, language, art, culture, startups, computing)
+- the structures that we put in place that enforce culture; addressing these (or being mindful) at the onset; integrating later
+- optimism and progress theories
+- biographies, autobiographies, biopics, memoirs, documentaries, paintings, photography, literature, poetry
+- contemporary art, both in theory and practice
+- markets, fundraising, social good, trying to leverage existing structures for different ends
+
+What are the stories we tell about the future? What do we think about our origins? How do we learn?
+
+Ontogeny recapitulates phylogeny - Haeckel
+
+Self-organization (biology) -> institutions
+
+Weaving baskets of people and resources
+
+Origins -> Legacies (cradle to cradle; cradle to grave - USING the human arc)
+
+Layers, onions; recapitulation; fractals
+
+Pattern matching and recognition and how this can be used incorrectly (when assumptions/conclusions are made)
+
+Tools
 
 TODO: make a system where these tags self-reorganize randomly and are inline-block
 
@@ -81,6 +115,8 @@ TODO: make a system where these tags self-reorganize randomly and are inline-blo
 - understanding through creating
 - helping through creating
 - moving forward
+- language
+- evolution
 
 ### organizations i like
 - housingworks
