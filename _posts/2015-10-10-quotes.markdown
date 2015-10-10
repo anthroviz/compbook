@@ -7,3 +7,17 @@ permalink: /quotes/
 ---
 
 Ontogeny recapitulates phylogeny - Haeckel
+
+### Mythology
+
+- Icarus / Daedalus
+- Atlas
+- Sisyphus
+
+### Mental models that aren't 100% scientific, more a blend of science and art
+
+- Kübler-Ross
+- MBTI
+- Recapitulation theory
+
+Use these as tools! Pattern recognition doesn't mean each instance conforms (statistics)
