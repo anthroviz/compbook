@@ -117,7 +117,3 @@ TODO: make a system where these tags self-reorganize randomly and are inline-blo
 - moving forward
 - language
 - evolution
-
-### organizations i like
-- housingworks
-- sir richard's
