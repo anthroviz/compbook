@@ -6,13 +6,13 @@ categories: iapc
 permalink: /iapc/
 ---
 
-I took two years at Gallatin and two years off from Gallatin for personal reasons. In the time that I wasn't a student, I learned a lot about the didactic methods I require and was perhaps overlooking in my excitement of becoming "a college student." I also learned about myself. I am excited to take these lessons back to Gallatin and formal education.
+I took two years at Gallatin and two years off from Gallatin for personal reasons. During my sabbatical, I learned a lot about the didactic methods I require and was perhaps overlooking in my excitement of becoming "a college student." I also had time to self-reflect and learned a ton about myself. I have a stronger grasp of my values. I am excited to take these lessons back to Gallatin and formal education.
 
-I chose Gallatin because I wanted more intellectual freedom than other schools that would have circumscribed me to the person I was when I was 18. I also knew I belonged in New York.
+I chose Gallatin because I wanted more intellectual freedom than other schools that would have circumscribed me to the person I was when I was 18. I also knew I belonged in New York City. At the end of my college application process, I had acceptances from NYU and top art schools. I made the judgment call then that art school would be too limiting for someone like me, who is interested in a wide range of ideas as well as artmaking - I believe this is still the case and I am grateful that I chose Gallatin. I knew I wanted to be in the most dynamic city in the world. I believed I could make it work.
 
-I came into Gallatin after a huge trauma and a huge ego to match, as a buffer. My thinking back then was self-centered: that the Self is the most important determining factor, that we all have the will to power. I have since learned that this is ridiculous. I think we are comprised of systems and I'm much more interested in myself as a tool in making these systems better than myself as a winner within the system. In that sense, I came in with grandiose thoughts about being a great artist or entrepreneur, but with a myopic focus on the end result rather than enjoying or even noticing the process. 
+I came into Gallatin after a huge trauma and a huge ego to match, as a buffer against the world. My thinking back then was self-centered: that the Self is the most important determining factor, that we all have the will to power. I have since learned that this is ridiculous - the world is not a vacuum. Our universe is comprised of systems, in all scales. Nowadays, I'm much more interested in myself as a tool in making these systems better than myself as a winner within the system. 
 
-It's this shift from becoming a
+In that sense, I came in with grandiose thoughts about being a great artist or entrepreneur, but with a myopic focus on the end result rather than enjoying or even noticing the process. I hyped and believed my own hype. I explored contemporary art courses, social entrepreneurship courses, expecting that they would come in handy someday. I went through the motions with certain coursework, choosing to use skills I already had instead of challenging myself to build new ones. I focused on the applied and the self-directed. I procrastinated and thought certain parts of the system were trivial bullshit.
 
 I was Icarus; I flew too close to the sun.
 
@@ -26,8 +26,15 @@ My concetration will be entitled Visualizing Human Narratives. I will be looking
 
 I will pursue classes which interest me and which explore the human condition. I will be working fulltime at my corporate job whilst finishing my undergraduate degree.
 
-I am interested in this story because of [[[[[[[big data small data]]]]]]
+I've shifted from being inwardly focused, like a microscope, to being generative. I suppose part of the Gallatin process will be figuring out is a sufficient new analogy for me. 
 
+I am interested in building tools and systems. I am interested in analyzing humanity's origins (which many would argue is precipitated by tools) and directing where we can go in the future.
+
+Working in the tech industry and leading the NYC collegiate tech community has taught me about the problematic culture in tech at the moment. In fact, the swagger feels like me, as a Freshman. I think we can change the thinking without similar catastrophes occuring. The tech industry is correct in assuming it will shape the future. I want to challenge some of the problematic foundations, so we don't build a future disaster.
+
+We forget in all the buzzword talk about "big data" and "artificial intelligence" that technology (in the narrow sense) is just another [[cool branch]] of technology as tools. I mean this in the sense that tools are built to support humanity, to help us realize our great imaginative potential. We forget that big data is comprised of many small datapoints of individual human stories.
+
+I want to both explore these human stories for their own sake as interesting data, as well as leverage my work as a cultural critique.
 
 ---
 
