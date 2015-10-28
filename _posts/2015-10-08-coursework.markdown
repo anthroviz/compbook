@@ -34,3 +34,13 @@ Advisor - Mitchell Joachim (now Meleko Mokgosi)
 - Family - Patrick McCreery
 - Intro to Painting I - Kevin Yang
 - Social Entrepreneurship - Andrew Greenblatt
+
+{% raw %}
+<script>
+$(document).ready( function() {
+	console.log("lost a leg");
+});
+
+</script>
+
+{% endraw %}
