@@ -37,8 +37,60 @@ Advisor - Mitchell Joachim (now Meleko Mokgosi)
 
 {% raw %}
 <script>
+var coursework = {
+	"data": {
+		"allSemesters": ["spring13", "fall12", "spring12", "fall11"],
+		"allRankings": [
+			{
+				"rankGrade": "A",
+				"rankDescription": "excellent"
+			},
+			{
+				"rankGrade": "B",
+				"rankDescription": "satisfactory"
+			},
+			{
+				"rankGrade": "C",
+				"rankDescription": "I was not ready"
+			},
+			{
+				"rankGrade": "D",
+				"rankDescription": "not for me"
+			}
+		],
+		"spring13": {
+			"courses": [
+				{
+					"title": "Art in Critical Theory",
+					"objective": {
+						"professor": "Meleko Mokgosi",
+						"tags": ["art", "theory", "political economy", "psychoanalysis"]
+					},
+					"subjective": {
+						
+					}
+				}
+			]
+		},
+		"fall12": {
+
+		},
+		"spring12": {
+
+		},
+		"fall11": {
+
+		}
+	},
+	"init": function() {
+		console.log(coursework);
+		console.log("think you're happy now!")
+	}
+}
+
+
 $(document).ready( function() {
-	console.log("lost a leg");
+	coursework.init();
 });
 
 </script>
