@@ -68,6 +68,7 @@ var coursework = {
 					"title": "Art: Practice and Ideas",
 					"objective": {
 						"professor": "Artie Vierkant",
+						"school": "Steinhardt - Art",
 						"tags": ["art", "theory", "contemporary-art"]
 					},
 					"subjective": {
@@ -79,6 +80,7 @@ var coursework = {
 					"title": "Evolution of Intellectual Complexity",
 					"objective": {
 						"professor": "Ray Dougherty",
+						"school": "CAS - Linguistics",
 						"tags": ["linguistics", "biology", "origins"]
 					},
 					"subjective": {
@@ -90,6 +92,7 @@ var coursework = {
 					"title": "Origin of Humanity",
 					"objective": {
 						"professor": "Stephanos Geroulanos",
+						"school": "CAS - History",
 						"tags": ["origins", "intellectual-history", "anthropology", "media"]
 					},
 					"subjective": {
@@ -101,6 +104,7 @@ var coursework = {
 					"title": "Think Big: Global Issues and Ecological Solutions",
 					"objective": {
 						"professor": "Mitchell Joachim",
+						"school": "Gallatin",
 						"tags": ["design", "ecology"]
 					},
 					"subjective": {
@@ -117,6 +121,7 @@ var coursework = {
 					"title": "Art in Critical Theory",
 					"objective": {
 						"professor": "Meleko Mokgosi",
+						"school": "Gallatin",
 						"tags": ["art", "theory", "political-economy", "psychoanalysis"]
 					},
 					"subjective": {
@@ -127,6 +132,7 @@ var coursework = {
 					"title": "Computers and Society",
 					"objective": {
 						"professor": "Evan Korth",
+						"school": "CAS - Courant",
 						"tags": ["computing", "culture", "anthropology", "technology"]
 					},
 					"subjective": {
@@ -137,6 +143,7 @@ var coursework = {
 					"title": "Creative Fundraising",
 					"objective": {
 						"professor": "Wilder Knight / Ed DePalma",
+						"school": "Tisch",
 						"tags": ["art", "business"]
 					},
 					"subjective": {
@@ -147,6 +154,7 @@ var coursework = {
 					"title": "Interdisciplinary Undergraduate Projects in Studio Art: Sex and Contemporary Art",
 					"objective": {
 						"professor": "Kathe Burkhart",
+						"school": "Steinhardt - Art",
 						"tags": ["art", "sex", "feminism"]
 					},
 					"subjective": {
@@ -162,6 +170,7 @@ var coursework = {
 					"title": "Art of Now",
 					"objective": {
 						"professor": "Haley Mellin",
+						"school": "Steinhardt - Art",
 						"tags": ["art", "theory", "praxis"]
 					},
 					"subjective": {
@@ -172,6 +181,7 @@ var coursework = {
 					"title": "Intro to Physical Computing",
 					"objective": {
 						"professor": "Scott Fitzgerald",
+						"school": "Tisch",
 						"tags": ["computing", "art", "technology"]
 					},
 					"subjective": {
@@ -182,6 +192,7 @@ var coursework = {
 					"title": "Rise of Internet Media",
 					"objective": {
 						"professor": "Aaron Cohen",
+						"school": "Steinhardt - MCC",
 						"tags": ["technology", "history"]
 					},
 					"subjective": {
@@ -192,6 +203,7 @@ var coursework = {
 					"title": "Urban Desires: Sex, Gender and New York City",
 					"objective": {
 						"professor": "Neil Meyer",
+						"school": "Gallatin",
 						"tags": ["theory", "anthropology", "psychoanalysis", "social-justice", "feminism"]
 					},
 					"subjective": {
@@ -207,6 +219,7 @@ var coursework = {
 					"title": "Artists' Lives, Artists' Work",
 					"objective": {
 						"professor": "Yevgeniya Traps",
+						"school": "Gallatin",
 						"tags": ["art", "theory", "intellectual-history"]
 					},
 					"subjective": {
@@ -217,30 +230,42 @@ var coursework = {
 					"title": "Family",
 					"objective": {
 						"professor": "Patrick McCreery",
+						"school": "Gallatin",
 						"tags": ["theory", "anthropology", "origins", "family"]
 					},
 					"subjective": {
-						"rank": "B"
+						"rank": "B",
+						"review": "Excellent professor and good intro to many liberal arts concepts",
+						"wish": "Had paid more attention to the readings",
+						"how": "keyword search Albert"
 					}
 				},
 				{
 					"title": "Intro to Painting I",
 					"objective": {
 						"professor": "Kevin Yang",
+						"school": "Steinhardt - Art",
 						"tags": ["art"]
 					},
 					"subjective": {
-						"rank": "D"
+						"rank": "D",
+						"review": "I was overqualified for the Intro I painting course, so spent the time working on my own projects",
+						"wish": "That I had real instruction or taken advantage of the professor, or, conversely, had swallowed my pride and tried to learn from him as directed",
+						"how": "Suggested by Orientation leader"
 					}
 				},
 				{
 					"title": "Social Entrepreneurship",
 					"objective": {
 						"professor": "Andrew Greenblatt",
+						"school": "Silver",
 						"tags": ["business", "social-responsibility", "strategy"]
 					},
 					"subjective": {
-						"rank": "B"
+						"rank": "B",
+						"review": "I learned plenty from this course",
+						"wish": "I had retained more from it",
+						"how": "keyword search Albert"
 					}
 				}
 			]
@@ -267,7 +292,7 @@ var coursework = {
 				// COURSES
 				for (var k = 0; k < thisSemester.courses.length; k++) {
 					var thisCourse = thisSemester.courses[k];
-					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + "<h5>" + thisCourse.objective.professor + "</h5>");
+					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + '<p class="course__school">' + thisCourse.objective.school + '</p>' + "<h5>" + thisCourse.objective.professor + "</h5>");
 						// COURSE TAGS
 						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
 							htmlTemplate.push('<span class="course-tag">' + thisCourse.objective.tags[m] + '</span>');
@@ -276,7 +301,11 @@ var coursework = {
 					var letterRank = thisCourse.subjective.rank;
 					var descriptionRank = coursework.data.ranks[letterRank].rankDescription;
 
-					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' + '<p>' + thisCourse.subjective.review + '</p>' + '</div>');
+					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' 
+						+ '<p>REVIEW: ' + thisCourse.subjective.review + '</p>' 
+						+ '<p>WISH: ' + thisCourse.subjective.wish + '</p>' 
+						+ '<p>DISCOVERY: ' + thisCourse.subjective.how + '</p>' 
+						+ '</div>');
 				}
 			}
 			htmlTemplate.push('</div>');
@@ -315,11 +344,18 @@ $(document).ready( function() {
 .semester__course {
 	width: 47%;
 	display: inline-block;
+	position: relative;
 }
 .course-tag {
 	display: inline-block;
-	padding: 0.5em;
+	padding: 0.25em;
 	border: 1px solid black;
+}
+.course__school {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 0.25em;
 }
 </style>
 {% endraw %}
