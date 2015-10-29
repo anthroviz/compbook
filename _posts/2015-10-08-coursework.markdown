@@ -71,7 +71,8 @@ var coursework = {
 						"tags": ["art", "theory", "contemporary-art"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "Blah"
 					}
 				},
 				{
@@ -81,7 +82,30 @@ var coursework = {
 						"tags": ["linguistics", "biology", "origins"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "Blah"
+					}
+				},
+				{
+					"title": "Origin of Humanity",
+					"objective": {
+						"professor": "Stephanos Geroulanos",
+						"tags": ["origins", "intellectual-history", "anthropology", "media"]
+					},
+					"subjective": {
+						"rank": "A",
+						"review": "Blah"
+					}
+				},
+				{
+					"title": "Think Big: Global Issues and Ecological Solutions",
+					"objective": {
+						"professor": "Mitchell Joachim",
+						"tags": ["design", "ecology"]
+					},
+					"subjective": {
+						"rank": "A",
+						"review": "Blah"
 					}
 				}
 			]
@@ -133,7 +157,16 @@ var coursework = {
 				// COURSES
 				for (var k = 0; k < thisSemester.courses.length; k++) {
 					var thisCourse = thisSemester.courses[k];
-					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + "<h5>" + thisCourse.objective.professor + "</h5>" + '</div>');
+					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + "<h5>" + thisCourse.objective.professor + "</h5>");
+						// COURSE TAGS
+						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
+							htmlTemplate.push('<span class="course-tag">' + thisCourse.objective.tags[m] + '</span>');
+						}
+
+					var letterRank = thisCourse.subjective.rank;
+					var descriptionRank = coursework.data.ranks[letterRank].rankDescription;
+
+					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' + '<p>' + thisCourse.subjective.review + '</p>' + '</div>');
 				}
 			}
 			htmlTemplate.push('</div>');
@@ -160,14 +193,23 @@ $(document).ready( function() {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
 }
 .semester, .semester__course {
 	border: 1px solid #aaa;
 	padding: 1em;
 }
 .semester__course {
-	width: 40%;
+	width: 47%;
 	display: inline-block;
+}
+.course-tag {
+	display: inline-block;
+	padding: 0.5em;
+	border: 1px solid black;
 }
 </style>
 {% endraw %}
