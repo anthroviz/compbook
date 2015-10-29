@@ -122,18 +122,128 @@ var coursework = {
 					"subjective": {
 						"rank": "A"
 					}
+				},
+				{
+					"title": "Computers and Society",
+					"objective": {
+						"professor": "Evan Korth",
+						"tags": ["computing", "culture", "anthropology", "technology"]
+					},
+					"subjective": {
+						"rank": "A"
+					}
+				},
+				{
+					"title": "Creative Fundraising",
+					"objective": {
+						"professor": "Wilder Knight / Ed DePalma",
+						"tags": ["art", "business"]
+					},
+					"subjective": {
+						"rank": "D"
+					}
+				},
+				{
+					"title": "Interdisciplinary Undergraduate Projects in Studio Art: Sex and Contemporary Art",
+					"objective": {
+						"professor": "Kathe Burkhart",
+						"tags": ["art", "sex", "feminism"]
+					},
+					"subjective": {
+						"rank": "D"
+					}
 				}
 			]
 		},
 		"spring12": {
 			"fullName": "Spring 2012",
 			"courses": [
-
+				{
+					"title": "Art of Now",
+					"objective": {
+						"professor": "Haley Mellin",
+						"tags": ["art", "theory", "praxis"]
+					},
+					"subjective": {
+						"rank": "A"
+					}
+				},
+				{
+					"title": "Intro to Physical Computing",
+					"objective": {
+						"professor": "Scott Fitzgerald",
+						"tags": ["computing", "art", "technology"]
+					},
+					"subjective": {
+						"rank": "C"
+					}
+				},
+				{
+					"title": "Rise of Internet Media",
+					"objective": {
+						"professor": "Aaron Cohen",
+						"tags": ["technology", "history"]
+					},
+					"subjective": {
+						"rank": "D"
+					}
+				},
+				{
+					"title": "Urban Desires: Sex, Gender and New York City",
+					"objective": {
+						"professor": "Neil Meyer",
+						"tags": ["theory", "anthropology", "psychoanalysis", "social-justice", "feminism"]
+					},
+					"subjective": {
+						"rank": "B"
+					}
+				}
 			]
 		},
 		"fall11": {
 			"fullName": "Fall 2011",
-			"courses": []
+			"courses": [
+				{
+					"title": "Artists' Lives, Artists' Work",
+					"objective": {
+						"professor": "Yevgeniya Traps",
+						"tags": ["art", "theory", "intellectual-history"]
+					},
+					"subjective": {
+						"rank": "A"
+					}
+				},
+				{
+					"title": "Family",
+					"objective": {
+						"professor": "Patrick McCreery",
+						"tags": ["theory", "anthropology", "origins", "family"]
+					},
+					"subjective": {
+						"rank": "B"
+					}
+				},
+				{
+					"title": "Intro to Painting I",
+					"objective": {
+						"professor": "Kevin Yang",
+						"tags": ["art"]
+					},
+					"subjective": {
+						"rank": "D"
+					}
+				},
+				{
+					"title": "Social Entrepreneurship",
+					"objective": {
+						"professor": "Andrew Greenblatt",
+						"tags": ["business", "social-responsibility", "strategy"]
+					},
+					"subjective": {
+						"rank": "B"
+					}
+				}
+			]
 		}
 	},
 	"reading": function(dataset) {
