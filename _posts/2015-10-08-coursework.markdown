@@ -223,7 +223,10 @@ var coursework = {
 						"tags": ["art", "theory", "intellectual-history"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "Excellent professor. Interesting range of readings and self-representations",
+						"wish": "had explored non-painting practice for final project",
+						"how": "course catalogue"
 					}
 				},
 				{
@@ -237,7 +240,7 @@ var coursework = {
 						"rank": "B",
 						"review": "Excellent professor and good intro to many liberal arts concepts",
 						"wish": "Had paid more attention to the readings",
-						"how": "keyword search Albert"
+						"how": "course catalogue"
 					}
 				},
 				{
@@ -263,7 +266,7 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "B",
-						"review": "I learned plenty from this course",
+						"review": "I learned plenty from this course; professor was decent",
 						"wish": "I had retained more from it",
 						"how": "keyword search Albert"
 					}
