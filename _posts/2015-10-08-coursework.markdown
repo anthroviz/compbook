@@ -268,7 +268,8 @@ var coursework = {
 						"rank": "B",
 						"review": "I learned plenty from this course; professor was decent",
 						"wish": "I had retained more from it",
-						"how": "keyword search Albert"
+						"how": "keyword search Albert",
+						"takeaways": "Saul Alinsky's Rules for Radicals"
 					}
 				}
 			]
@@ -287,6 +288,24 @@ var coursework = {
 		var htmlTemplate = [];
 		var readSemesters = coursework.reading(coursework.data.allSemesters);
 
+
+		function loopSubjective(obj) {
+			var reviewArr = ['<dl class="subj__entry">'];
+
+			for (var prop in obj) {
+				switch (prop) {
+					case "rank":
+						break;
+					default:
+						// {?} saving format for subjective loads
+						reviewArr.push('<dt class="subj__flag">' + prop.toUpperCase() + ':</dt> <dd class="subj__copy">' +  obj[prop] + '</dd>');
+						break;
+				}
+			}
+			reviewArr.push("</dl>")
+			return reviewArr.join("");
+		}
+
 		for (var j = 0; j < readSemesters.length; j++) {
 			var thisSemester = readSemesters[j];
 
@@ -303,12 +322,9 @@ var coursework = {
 
 					var letterRank = thisCourse.subjective.rank;
 					var descriptionRank = coursework.data.ranks[letterRank].rankDescription;
+					var saveSubj = loopSubjective(thisCourse.subjective);
 
-					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' 
-						+ '<p>REVIEW: ' + thisCourse.subjective.review + '</p>' 
-						+ '<p>WISH: ' + thisCourse.subjective.wish + '</p>' 
-						+ '<p>DISCOVERY: ' + thisCourse.subjective.how + '</p>' 
-						+ '</div>');
+					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' + saveSubj + '</div>');
 				}
 			}
 			htmlTemplate.push('</div>');
@@ -359,6 +375,21 @@ $(document).ready( function() {
 	top: 0;
 	right: 0;
 	padding: 0 0.25em;
+}
+.subj__entry {
+	line-height: 1.75;
+}
+.subj__flag {
+	width: 20%;
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 0.5em;
+}
+.subj__copy {
+	width: 75%;
+	display: inline-block;
+	line-height: 1.25;
 }
 </style>
 {% endraw %}
