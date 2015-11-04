@@ -312,7 +312,7 @@ var coursework = {
 		}
 
 		function makeTag(template, currentTag) {
-			template.push('<span class="course-tag">' + currentTag + '</span>')
+			template.push('<span class="course-tag ' + currentTag + '">' + currentTag + '</span>')
 		}
 
 		function checkTag(currentTag) {
@@ -425,6 +425,11 @@ body {
 	left: 0;
 	padding: 1em;
 	height: 70px;
+}
+
+/* course tag lyfe */
+.course-tag.art {
+	background-color: #ED6A5A;
 }
 </style>
 
