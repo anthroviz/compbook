@@ -204,10 +204,11 @@ var coursework = {
 					"objective": {
 						"professor": "Neil Meyer",
 						"school": "Gallatin",
-						"tags": ["theory", "anthropology", "psychoanalysis", "social-justice", "feminism"]
+						"tags": ["gender-studies", "sex", "theory", "anthropology", "psychoanalysis", "social-justice", "feminism"]
 					},
 					"subjective": {
-						"rank": "B"
+						"rank": "B",
+						"review": "fun course with foundational readings in human sexuality and gender studies"
 					}
 				}
 			]
@@ -226,7 +227,8 @@ var coursework = {
 						"rank": "A",
 						"review": "Excellent professor. Interesting range of readings and self-representations",
 						"wish": "had explored non-painting practice for final project",
-						"how": "course catalogue"
+						"how": "course catalogue",
+						"takeaways": "bildungsromans, graphic novels, narrative structures, how other people represent themselves"
 					}
 				},
 				{
@@ -240,7 +242,8 @@ var coursework = {
 						"rank": "B",
 						"review": "Excellent professor and good intro to many liberal arts concepts",
 						"wish": "Had paid more attention to the readings",
-						"how": "course catalogue"
+						"how": "course catalogue",
+						"takeaways": "Margaret Atwood Handmaid's Tale, population growth in Europe slowing, assumed families, social constructions"
 					}
 				},
 				{
@@ -248,13 +251,14 @@ var coursework = {
 					"objective": {
 						"professor": "Kevin Yang",
 						"school": "Steinhardt - Art",
-						"tags": ["art"]
+						"tags": ["art", "artmaking"]
 					},
 					"subjective": {
 						"rank": "D",
 						"review": "I was overqualified for the Intro I painting course, so spent the time working on my own projects",
 						"wish": "That I had real instruction or taken advantage of the professor, or, conversely, had swallowed my pride and tried to learn from him as directed",
-						"how": "Suggested by Orientation leader"
+						"how": "Suggested by Orientation leader",
+						"takeaways": "freshman year mural painting"
 					}
 				},
 				{
@@ -287,7 +291,8 @@ var coursework = {
 	"assembleCourses": function() {
 		var htmlTemplate = [];
 		var readSemesters = coursework.reading(coursework.data.allSemesters);
-
+		var disciplineTags = [];
+		var uniqueTags = [];
 
 		function loopSubjective(obj) {
 			var reviewArr = ['<dl class="subj__entry">'];
@@ -306,6 +311,19 @@ var coursework = {
 			return reviewArr.join("");
 		}
 
+		function makeTag(template, currentTag) {
+			template.push('<span class="course-tag">' + currentTag + '</span>')
+		}
+
+		function checkTag(currentTag) {
+			if (disciplineTags.indexOf(currentTag) !== -1) {
+				return;
+			}
+			
+			disciplineTags.push(currentTag);
+			makeTag(uniqueTags, currentTag);
+		}
+
 		for (var j = 0; j < readSemesters.length; j++) {
 			var thisSemester = readSemesters[j];
 
@@ -317,7 +335,8 @@ var coursework = {
 					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + '<p class="course__school">' + thisCourse.objective.school + '</p>' + "<h5>" + thisCourse.objective.professor + "</h5>");
 						// COURSE TAGS
 						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
-							htmlTemplate.push('<span class="course-tag">' + thisCourse.objective.tags[m] + '</span>');
+							checkTag(thisCourse.objective.tags[m]);
+							makeTag(htmlTemplate, thisCourse.objective.tags[m]);
 						}
 
 					var letterRank = thisCourse.subjective.rank;
@@ -329,6 +348,8 @@ var coursework = {
 			}
 			htmlTemplate.push('</div>');
 		}
+
+		$(".courses__overview").html(uniqueTags.sort());
 		return htmlTemplate.join("");
 	},
 	"init": function() {
@@ -346,6 +367,10 @@ $(document).ready( function() {
 </script>
 
 <style>
+body {
+	margin-top: 100px;
+	box-sizing: border-box;
+}
 .coursework__ranks {
 	border: 1px solid black;
 	box-sizing: border-box;
@@ -391,5 +416,18 @@ $(document).ready( function() {
 	display: inline-block;
 	line-height: 1.25;
 }
+.courses__overview {
+	position: fixed;
+	top: 0;
+	background-color: #222;
+	color: white;
+	width: 100%;
+	left: 0;
+	padding: 1em;
+	height: 70px;
+}
 </style>
+
+<div class="courses__overview">
+</div>
 {% endraw %}
