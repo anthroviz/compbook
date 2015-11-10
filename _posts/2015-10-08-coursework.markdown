@@ -292,6 +292,7 @@ var coursework = {
 		var htmlTemplate = [];
 		var readSemesters = coursework.reading(coursework.data.allSemesters);
 		var disciplineTags = [];
+		var disciplineTagsCount = [];
 		var uniqueTags = [];
 
 		function loopSubjective(obj) {
@@ -311,17 +312,33 @@ var coursework = {
 			return reviewArr.join("");
 		}
 
-		function makeTag(template, currentTag) {
-			template.push('<span class="course-tag ' + currentTag + '">' + currentTag + '</span>')
+		function convertCurrentTag(currentTag) {
+			return disciplineTagsCount[disciplineTags.indexOf(currentTag)];
+		}
+
+		function makeTag(template, currentTag, numTrue) {
+			console.log(convertCurrentTag(currentTag));
+
+			var num = numTrue ? " (" + convertCurrentTag(currentTag).instance + ")" : "";
+
+			template.push('<span class="course-tag ' + currentTag + '">' + currentTag + num + '</span>')
 		}
 
 		function checkTag(currentTag) {
-			if (disciplineTags.indexOf(currentTag) !== -1) {
+			var indexCurrent = disciplineTags.indexOf(currentTag);
+			if (indexCurrent !== -1) {
+				convertCurrentTag(currentTag).instance++;
 				return;
 			}
 			
+			function Tag(tag) {
+				this.tag = tag;
+				this.instance = 1;
+			}
+
 			disciplineTags.push(currentTag);
-			makeTag(uniqueTags, currentTag);
+			disciplineTagsCount.push(new Tag(currentTag));
+			//makeTag(uniqueTags, currentTag, true);
 		}
 
 		for (var j = 0; j < readSemesters.length; j++) {
@@ -337,6 +354,7 @@ var coursework = {
 						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
 							checkTag(thisCourse.objective.tags[m]);
 							makeTag(htmlTemplate, thisCourse.objective.tags[m]);
+							makeTag(uniqueTags, thisCourse.objective.tags[m], true);
 						}
 
 					var letterRank = thisCourse.subjective.rank;
