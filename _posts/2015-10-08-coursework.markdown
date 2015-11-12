@@ -45,6 +45,9 @@ Advisor - Mitchell Joachim (now Meleko Mokgosi)
 <script>
 var coursework = {
 	"data": {
+		"isTopic": ["contemporary-art", "social-responsibility", "origins", "family", "feminism", "sex", "social-justice", "culture", "media"],
+		"isApplied": ["design", "artmaking", "strategy", "praxis", "technology", "business"],
+		"isTheory": ["art", "ecology", "biology", "critical-theory", "intellectual-history", "anthropology", "computing", "gender-studies", "linguistics", "history", "psychoanalysis", "political-economy"],
 		"allSemesters": ["spring13", "fall12", "spring12", "fall11"],
 		"allRankings": ["A", "B", "C", "D"],
 		"ranks": {
@@ -362,7 +365,18 @@ var coursework = {
 		// {?} makes courses header
 		for (var subj in masterSubjects) {
 			makeTag(uniqueTags, subj, true);
+
+			var checkBalances = [coursework.data.isTopic, coursework.data.isTheory, coursework.data.isApplied];
+
+			for (var c = 0; c < checkBalances.length; c++) {
+				console.log(c);
+				console.log(checkBalances[c].indexOf(subj) > 0);
+			}
+
+			console.log(coursework.data.isTopic.indexOf(subj) > 0);
 		}
+
+		console.log(masterSubjects);
 
 		$(".courses__overview").html(uniqueTags.sort());
 		return htmlTemplate.join("");
