@@ -292,8 +292,8 @@ var coursework = {
 		var htmlTemplate = [];
 		var readSemesters = coursework.reading(coursework.data.allSemesters);
 		var disciplineTags = [];
-		var disciplineTagsCount = [];
 		var uniqueTags = [];
+		var masterSubjects = {};
 
 		function loopSubjective(obj) {
 			var reviewArr = ['<dl class="subj__entry">'];
@@ -312,22 +312,15 @@ var coursework = {
 			return reviewArr.join("");
 		}
 
-		function convertCurrentTag(currentTag) {
-			return disciplineTagsCount[disciplineTags.indexOf(currentTag)];
-		}
-
 		function makeTag(template, currentTag, numTrue) {
-			console.log(convertCurrentTag(currentTag));
-
-			var num = numTrue ? " (" + convertCurrentTag(currentTag).instance + ")" : "";
-
+			var num = numTrue ? " (" + masterSubjects[currentTag] + ")" : "";
 			template.push('<span class="course-tag ' + currentTag + '">' + currentTag + num + '</span>')
 		}
 
 		function checkTag(currentTag) {
 			var indexCurrent = disciplineTags.indexOf(currentTag);
 			if (indexCurrent !== -1) {
-				convertCurrentTag(currentTag).instance++;
+				masterSubjects[currentTag]++;
 				return;
 			}
 			
@@ -336,11 +329,11 @@ var coursework = {
 				this.instance = 1;
 			}
 
+			masterSubjects[currentTag] = 1;
 			disciplineTags.push(currentTag);
-			disciplineTagsCount.push(new Tag(currentTag));
-			//makeTag(uniqueTags, currentTag, true);
 		}
 
+		// {?} makes course cards
 		for (var j = 0; j < readSemesters.length; j++) {
 			var thisSemester = readSemesters[j];
 
@@ -354,7 +347,6 @@ var coursework = {
 						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
 							checkTag(thisCourse.objective.tags[m]);
 							makeTag(htmlTemplate, thisCourse.objective.tags[m]);
-							makeTag(uniqueTags, thisCourse.objective.tags[m], true);
 						}
 
 					var letterRank = thisCourse.subjective.rank;
@@ -365,6 +357,11 @@ var coursework = {
 				}
 			}
 			htmlTemplate.push('</div>');
+		}
+
+		// {?} makes courses header
+		for (var subj in masterSubjects) {
+			makeTag(uniqueTags, subj, true);
 		}
 
 		$(".courses__overview").html(uniqueTags.sort());
@@ -442,7 +439,7 @@ body {
 	width: 100%;
 	left: 0;
 	padding: 1em;
-	height: 70px;
+	min-height: 70px;
 }
 
 /* course tag lyfe */
