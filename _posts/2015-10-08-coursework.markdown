@@ -177,7 +177,11 @@ var coursework = {
 						"tags": ["art", "theory", "praxis"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "transformative class with intro to contemporary art world",
+						"wish": "had taken her second class the next semester",
+						"how": "keyword search",
+						"takeaways": "relational aesthetics, net art, what is the contemporary"
 					}
 				},
 				{
@@ -188,7 +192,11 @@ var coursework = {
 						"tags": ["computing", "art", "technology"]
 					},
 					"subjective": {
-						"rank": "C"
+						"rank": "C",
+						"review": "fascinating class and subject but i was not ready for the work in any capacity",
+						"wish": "i had asked for more help; i had taken this later after knowing more programming",
+						"how": "browsing through Tisch open courses",
+						"takeaways": "physical computing is interesting, requires more knowledge than i was able to scale as a freshman"
 					}
 				},
 				{
@@ -199,7 +207,11 @@ var coursework = {
 						"tags": ["technology", "history"]
 					},
 					"subjective": {
-						"rank": "D"
+						"rank": "D",
+						"review": "facebook and google ogling, not enough real content about how things could be",
+						"wish": "had quit this course and not been so impressed",
+						"how": "keyword search",
+						"takeaways": "journalistic coverage on internet media needs help"
 					}
 				},
 				{
@@ -211,7 +223,10 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "B",
-						"review": "fun course with foundational readings in human sexuality and gender studies"
+						"review": "fun course with foundational readings in human sexuality and gender studies",
+						"wish": "had challenged self more about different kinds of identities",
+						"how": "course catalogue",
+						"takeaways": "performative sexualities, bodies cities, urban spaces renewal"
 					}
 				}
 			]
