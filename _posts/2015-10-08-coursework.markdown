@@ -47,7 +47,7 @@ var coursework = {
 	"data": {
 		"isTopic": ["contemporary-art", "social-responsibility", "origins", "family", "feminism", "sex", "social-justice", "culture", "media"],
 		"isApplied": ["design", "artmaking", "strategy", "praxis", "technology", "business"],
-		"isTheory": ["art", "ecology", "biology", "critical-theory", "intellectual-history", "anthropology", "computing", "gender-studies", "linguistics", "history", "psychoanalysis", "political-economy"],
+		"isTheory": ["art", "ecology", "biology", "critical-theory", "intellectual-history", "anthropology", "computing", "gender-studies", "linguistics", "history", "psychoanalysis", "political-economy", "theory"],
 		"allSemesters": ["spring13", "fall12", "spring12", "fall11"],
 		"allRankings": ["A", "B", "C", "D"],
 		"ranks": {
@@ -150,7 +150,11 @@ var coursework = {
 						"tags": ["art", "business"]
 					},
 					"subjective": {
-						"rank": "D"
+						"rank": "D",
+						"review": "course was geared towards Tisch filmmakers. original professor was excellent but left due to a family emergency, which is understandable but messed up the experience of the course.",
+						"wish": "i had left when the professor left",
+						"how": "tisch open arts",
+						"takeaways": "writing grants for money, happiness project, art basel"
 					}
 				},
 				{
@@ -161,7 +165,11 @@ var coursework = {
 						"tags": ["art", "sex", "feminism"]
 					},
 					"subjective": {
-						"rank": "D"
+						"rank": "D",
+						"review": "I found the interpretations of art, sex, and feminism lacking in this course - very normative and not intersectional. some great feminist art history, however",
+						"wish": "I tried to make good art and then I gave into making pandering bad art - I wish I had just made good art anyway",
+						"how": "keyword search",
+						"takeaways": "the fine line between trendy and appropriately edgy in institutional art, martha rosler, SCUM manifesto"
 					}
 				}
 			]
@@ -330,9 +338,40 @@ var coursework = {
 			return reviewArr.join("");
 		}
 
-		function makeTag(template, currentTag, numTrue) {
+		function checkSubjectType(addTagObject) {
+			var checkBalances = [coursework.data.isTopic, coursework.data.isTheory, coursework.data.isApplied];
+			for (var c = 0; c < checkBalances.length; c++) {
+				var subjectCheckIndex = checkBalances[c].indexOf(addTagObject.subject);
+				if (subjectCheckIndex > -1) {
+					switch (c) {
+						case 0:
+							addTagObject.special = "is-topic";
+							break;
+						case 1:
+							addTagObject.special = "is-theory";
+							break;
+						case 2:
+							addTagObject.special = "is-applied";
+							break;
+						default:
+							break;
+					}
+				}
+			}
+		}
+
+		function makeTag(settingsObject) {
+			var template = settingsObject.template;
+			var currentTag = settingsObject.subject;
+			var numTrue = settingsObject.number;
+			var special;
+
+			// {?} bucket subject properly
+			checkSubjectType(settingsObject);
+			special = settingsObject.special;
+
 			var num = numTrue ? " (" + masterSubjects[currentTag] + ")" : "";
-			template.push('<span class="course-tag ' + currentTag + '">' + currentTag + num + '</span>')
+			template.push('<span class="course-tag ' + currentTag + (special ? " " + special : "") + '">' + currentTag + num + '</span>')
 		}
 
 		function checkTag(currentTag) {
@@ -351,6 +390,8 @@ var coursework = {
 			disciplineTags.push(currentTag);
 		}
 
+		
+
 		// {?} makes course cards
 		for (var j = 0; j < readSemesters.length; j++) {
 			var thisSemester = readSemesters[j];
@@ -364,7 +405,8 @@ var coursework = {
 						// COURSE TAGS
 						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
 							checkTag(thisCourse.objective.tags[m]);
-							makeTag(htmlTemplate, thisCourse.objective.tags[m]);
+							var addTag = {'template': htmlTemplate, 'subject': thisCourse.objective.tags[m]};
+							makeTag(addTag);
 						}
 
 					var letterRank = thisCourse.subjective.rank;
@@ -379,19 +421,9 @@ var coursework = {
 
 		// {?} makes courses header
 		for (var subj in masterSubjects) {
-			makeTag(uniqueTags, subj, true);
-
-			var checkBalances = [coursework.data.isTopic, coursework.data.isTheory, coursework.data.isApplied];
-
-			for (var c = 0; c < checkBalances.length; c++) {
-				console.log(c);
-				console.log(checkBalances[c].indexOf(subj) > 0);
-			}
-
-			console.log(coursework.data.isTopic.indexOf(subj) > 0);
+			var addTagHeader = {'template': uniqueTags, 'subject': subj, 'number': true};
+			makeTag(addTagHeader);
 		}
-
-		console.log(masterSubjects);
 
 		$(".courses__overview").html(uniqueTags.sort());
 		return htmlTemplate.join("");
@@ -473,7 +505,16 @@ body {
 
 /* course tag lyfe */
 .course-tag.art {
-	background-color: #ED6A5A;
+	/*background-color: #ED6A5A;*/
+}
+.course-tag.is-theory {
+	border-bottom: 2px dashed blue;
+}
+.course-tag.is-applied {
+	border-bottom: 2px solid red;
+}
+.course-tag.is-topic {
+	border-bottom: 2px dotted purple;
 }
 </style>
 
