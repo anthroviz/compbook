@@ -46,7 +46,7 @@ Advisor - Mitchell Joachim (now Meleko Mokgosi)
 var coursework = {
 	"data": {
 		"isTopic": ["contemporary-art", "social-responsibility", "origins", "family", "feminism", "sex", "social-justice", "culture", "media"],
-		"isApplied": ["design", "artmaking", "strategy", "praxis", "technology", "business"],
+		"isApplied": ["design", "artmaking", "strategy", "praxis", "technology", "business", "writing"],
 		"isTheory": ["art", "ecology", "biology", "critical-theory", "intellectual-history", "anthropology", "computing", "gender-studies", "linguistics", "history", "psychoanalysis", "political-economy", "theory"],
 		"allSemesters": ["spring13", "fall12", "spring12", "fall11"],
 		"allRankings": ["A", "B", "C", "D"],
@@ -108,7 +108,7 @@ var coursework = {
 					"objective": {
 						"professor": "Mitchell Joachim",
 						"school": "Gallatin",
-						"tags": ["design", "ecology"]
+						"tags": ["design", "ecology", "biology"]
 					},
 					"subjective": {
 						"rank": "A",
@@ -147,7 +147,7 @@ var coursework = {
 					"objective": {
 						"professor": "Wilder Knight / Ed DePalma",
 						"school": "Tisch",
-						"tags": ["art", "business"]
+						"tags": ["art", "business", "media"]
 					},
 					"subjective": {
 						"rank": "D",
@@ -162,7 +162,7 @@ var coursework = {
 					"objective": {
 						"professor": "Kathe Burkhart",
 						"school": "Steinhardt - Art",
-						"tags": ["art", "sex", "feminism"]
+						"tags": ["art", "sex", "feminism", "artmaking", "intellectual-history"]
 					},
 					"subjective": {
 						"rank": "D",
@@ -227,7 +227,7 @@ var coursework = {
 					"objective": {
 						"professor": "Neil Meyer",
 						"school": "Gallatin",
-						"tags": ["gender-studies", "sex", "theory", "anthropology", "psychoanalysis", "social-justice", "feminism"]
+						"tags": ["gender-studies", "sex", "theory", "anthropology", "psychoanalysis", "social-justice", "feminism", "writing"]
 					},
 					"subjective": {
 						"rank": "B",
@@ -247,7 +247,7 @@ var coursework = {
 					"objective": {
 						"professor": "Yevgeniya Traps",
 						"school": "Gallatin",
-						"tags": ["art", "theory", "intellectual-history"]
+						"tags": ["art", "theory", "intellectual-history", "writing"]
 					},
 					"subjective": {
 						"rank": "A",
@@ -401,17 +401,18 @@ var coursework = {
 				// COURSES
 				for (var k = 0; k < thisSemester.courses.length; k++) {
 					var thisCourse = thisSemester.courses[k];
-					htmlTemplate.push('<div class="semester__course">' + "<h1>" + thisCourse.title + "</h1>" + '<p class="course__school">' + thisCourse.objective.school + '</p>' + "<h5>" + thisCourse.objective.professor + "</h5>");
-						// COURSE TAGS
-						for (var m = 0; m < thisCourse.objective.tags.length; m++) {
-							checkTag(thisCourse.objective.tags[m]);
-							var addTag = {'template': htmlTemplate, 'subject': thisCourse.objective.tags[m]};
-							makeTag(addTag);
-						}
-
 					var letterRank = thisCourse.subjective.rank;
 					var descriptionRank = coursework.data.ranks[letterRank].rankDescription;
 					var saveSubj = loopSubjective(thisCourse.subjective);
+
+					htmlTemplate.push('<div class="semester__course' + " grade--" + letterRank + '">' + "<h1>" + thisCourse.title + "</h1>" + '<p class="course__school">' + thisCourse.objective.school + '</p>' + "<h5>" + thisCourse.objective.professor + "</h5>");
+					
+					// COURSE TAGS
+					for (var m = 0; m < thisCourse.objective.tags.length; m++) {
+						checkTag(thisCourse.objective.tags[m]);
+						var addTag = {'template': htmlTemplate, 'subject': thisCourse.objective.tags[m]};
+						makeTag(addTag);
+					}
 
 					htmlTemplate.push('<h1>' + letterRank  + ' <small>' + descriptionRank + '</small>' + '</h1>' + saveSubj + '</div>');
 				}
@@ -465,6 +466,7 @@ body {
 	width: 47%;
 	display: inline-block;
 	position: relative;
+	height: 40em;
 }
 .course-tag {
 	display: inline-block;
@@ -515,6 +517,39 @@ body {
 }
 .course-tag.is-topic {
 	border-bottom: 2px dotted purple;
+}
+.semester__course .course-tag {
+	background-color: white;
+}
+.semester__course .is-theory {
+	border: 2px dashed blue;
+	background-color: #cbdbff;
+}
+.semester__course .is-topic {
+	border: 2px dotted purple;
+	background-color: #dacbff;
+}
+.semester__course .is-applied {
+	border: 2px solid red;
+	background-color: #ffcbcb;
+}
+.grade--A {
+	background-color: #eee;
+}
+.grade--B {
+	background-color: #ccc;
+}
+.grade--C {
+	background-color: #aaa;
+}
+.grade--D {
+	background-color: #999;
+}
+.semester__course {
+	transition: 0.5s all;
+}
+.semester__course:hover {
+	opacity: 1;
 }
 </style>
 
