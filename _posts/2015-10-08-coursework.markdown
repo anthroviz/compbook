@@ -94,7 +94,7 @@ var coursework = {
 						"review": "generative linguistics from a student of chomsky. excellent and engaging anecdotes. biological basis to linguistics - theory about how human language came to be and animal examples",
 						"wish": "had more of a background in linguistics coming in",
 						"how": "keyword search",
-						"takeaways": "chomsky, tecumseh fitch, cochlea"
+						"takeaways": "chomsky, tecumseh fitch, cochlea, birds, evolving in order to hear sounds"
 					}
 				},
 				{
@@ -109,7 +109,7 @@ var coursework = {
 						"review": "thorough intellectual history crash course focusing on the question of origins. multidisciplinary approach. professor was very good and down to earth, as well as the TA. contextualized the holocaust as well as utopian theories",
 						"wish": "I had done all of the readings, especially Heigel's The Phenomenology of Spirit",
 						"how": "keyword search",
-						"takeaways": "Bataille, Condorcet, Rousseau, Herder, Ontology recapitulates Phylogeny (Haeckel)"
+						"takeaways": "Bataille, Condorcet, Rousseau, Herder, Ontology recapitulates Phylogeny (Haeckel), wagner, misreadings of history by Nazis"
 					}
 				},
 				{
@@ -124,7 +124,7 @@ var coursework = {
 						"review": "thought-provoking and diverse ways to think about design thinking as applied to the huge environmental and ecological problems of the day. many great design exercises. good field trips as well",
 						"wish": "i had taken advantage of the TA who knew a lot more skills (such as maya and blender)",
 						"how": "advisor",
-						"takeaways": "small multiples, plastics, cradle to cradle, utopia, buckminster fuller"
+						"takeaways": "small multiples, plastics, cradle to cradle, utopia, buckminster fuller, doing more with what already exists, making marketing campaigns and messaging to promote deep ideas simply"
 					}
 				}
 			]
@@ -144,7 +144,7 @@ var coursework = {
 						"review": "excellent class as both an intro to critical theory as well as art history and questions in contemporary art. many interesting classmates, well-rounded discussion.",
 						"wish": "i had read more in depth, i had talked more to other classmates who knew what they were talking about",
 						"how": "chance class came up in email (was added over the summer)",
-						"takeaways": "italianicty, barthes, rosalind krauss originality of the avant-garde and the grid, coco, freud, alina"
+						"takeaways": "italianicty, barthes, rosalind krauss originality of the avant-garde and the grid, coco fusco, freud, alina"
 					}
 				},
 				{
@@ -159,7 +159,7 @@ var coursework = {
 						"review": "sophisticated and comprehensive take on the structure of the internet, as well as how society interacts therein",
 						"wish": "i had retained more",
 						"how": "knew professor",
-						"takeaways": "larry lenihan code, TCP/IP, counting in binary"
+						"takeaways": "larry lenihan code, TCP/IP, counting in binary, encryption"
 					}
 				},
 				{
