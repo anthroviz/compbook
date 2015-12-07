@@ -76,7 +76,10 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "A",
-						"review": "Blah"
+						"review": "cutting edge contemporary art lectures as well as art history. really great practicing professor",
+						"wish": "did not pay enough attention during lecture",
+						"how": "keyword search + steinhardt catalogue",
+						"takeaways": "eadward muybridge, nude descending a staircase, brad troemel, postinternet, net art"
 					}
 				},
 				{
@@ -88,7 +91,10 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "A",
-						"review": "Blah"
+						"review": "generative linguistics from a student of chomsky. excellent and engaging anecdotes. biological basis to linguistics - theory about how human language came to be and animal examples",
+						"wish": "had more of a background in linguistics coming in",
+						"how": "keyword search",
+						"takeaways": "chomsky, tecumseh fitch, cochlea"
 					}
 				},
 				{
@@ -100,7 +106,10 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "A",
-						"review": "Blah"
+						"review": "thorough intellectual history crash course focusing on the question of origins. multidisciplinary approach. professor was very good and down to earth, as well as the TA. contextualized the holocaust as well as utopian theories",
+						"wish": "I had done all of the readings, especially Heigel's The Phenomenology of Spirit",
+						"how": "keyword search",
+						"takeaways": "Bataille, Condorcet, Rousseau, Herder, Ontology recapitulates Phylogeny (Haeckel)"
 					}
 				},
 				{
@@ -112,7 +121,10 @@ var coursework = {
 					},
 					"subjective": {
 						"rank": "A",
-						"review": "Blah"
+						"review": "thought-provoking and diverse ways to think about design thinking as applied to the huge environmental and ecological problems of the day. many great design exercises. good field trips as well",
+						"wish": "i had taken advantage of the TA who knew a lot more skills (such as maya and blender)",
+						"how": "advisor",
+						"takeaways": "small multiples, plastics, cradle to cradle, utopia, buckminster fuller"
 					}
 				}
 			]
@@ -125,10 +137,14 @@ var coursework = {
 					"objective": {
 						"professor": "Meleko Mokgosi",
 						"school": "Gallatin",
-						"tags": ["art", "theory", "political-economy", "psychoanalysis"]
+						"tags": ["art", "theory", "critical-theory", "political-economy", "psychoanalysis"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "excellent class as both an intro to critical theory as well as art history and questions in contemporary art. many interesting classmates, well-rounded discussion.",
+						"wish": "i had read more in depth, i had talked more to other classmates who knew what they were talking about",
+						"how": "chance class came up in email (was added over the summer)",
+						"takeaways": "italianicty, barthes, rosalind krauss originality of the avant-garde and the grid, coco, freud, alina"
 					}
 				},
 				{
@@ -139,7 +155,11 @@ var coursework = {
 						"tags": ["computing", "culture", "anthropology", "technology"]
 					},
 					"subjective": {
-						"rank": "A"
+						"rank": "A",
+						"review": "sophisticated and comprehensive take on the structure of the internet, as well as how society interacts therein",
+						"wish": "i had retained more",
+						"how": "knew professor",
+						"takeaways": "larry lenihan code, TCP/IP, counting in binary"
 					}
 				},
 				{
