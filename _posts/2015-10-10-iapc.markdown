@@ -6,6 +6,7 @@ categories: iapc
 permalink: /iapc/
 ---
 
+
 I took two years at Gallatin and two years off from Gallatin for personal reasons. During my sabbatical, I learned a lot about the didactic methods I require and was perhaps overlooking in my excitement of becoming "a college student." I also had time to self-reflect and learned a ton about myself. I have a stronger grasp of my values. I am excited to take these lessons back to formal education and Gallatin's community.
 
 I chose Gallatin because I wanted more intellectual freedom than other schools that would have circumscribed me to the person I was when I was 18. I knew I had a lot of interests but I wasn't sure what I wanted to do. I also knew I belonged in New York City. At the end of my college application process, I had acceptances from NYU and top art schools. I spent high school exploring different academic disciplines, as well as my natural interests and talents: painting, stagecraft, graphic design, literary magazines, music, typography, gaming, web design, entrepreneurship. I made the judgment call then that art school would be too limiting for someone like me, interested in a wide range of ideas as well as artmaking - I believe this is still the case and I am grateful that I chose Gallatin. I knew I wanted to be in the most dynamic city in the world. I believed I could make it work.
@@ -24,23 +25,79 @@ I was Icarus; I flew too close to the sun.
 
 I thought then that having a fantastic life would offset the horrors that I had experienced. That somehow, since I had gone to the nadir, it would oscillate to a zenith. This is faulty thinking.
 
+--- ABOVE THIS LINE IS IA AND IT IS GREAT - NEEDS TO BE CUT DOWN ---
+
+1. My experience with real life means a more realistic view of other peoples' stories
+	- death
+	- job
+	- shit going down
+2. understanding other people is the key to accomplishing on a personal scale and on a macro scale of improving the world
+3. i believe i can help people understand each other through visual narratives
+
+---
+
+1. I want to study Visualizing Human Narratives, primarily a blend of Art, Design, Technology, Biology
+2. In the end this is probably Anthropology
+3. Exploring through visual representation, crafted and coded
+4. Using that which makes us human (tools and art) to remind ourselves of our humanity - vulnerability, transparency
+5. design has a huge influence on our every day - two are primarily future looking and two are primarily past looking
+
+---
+
+1. Also concerned with futurist notions of utopia and dystopia. Convinced that we need to be thinking about these more rigidly. In intellectual history many thinkers have tried to come up with origins in order to talk about future possibilities
+2. tech has a huge opportunity here
+
+---
+
+- why these 4 main subjects?
+- think they are analogous - just with more or less human involvement
+- help people see the way things are
+- realistic expectations
+- unbounded possibilities
+- training through art
+- to see
+- to render
+- training through design
+- to research
+- to make better
+- a lot of important issues in the world
+- social justice
+- needs to be explained in a way that people can understand
+- data is important as a backbone
+- visual style is important to be compelling
+- sex appeal
+- spreading knowledge and helping things be better
+- believe in progress
+- writing exercises
+- five whys 1
+- my concentration is in visualizing human narratives
+- i am interested in telling stories through data
+- i want people to understand deeper truths
+- i can see those truths as well as ways that other people need to see them to understand them
+- people don't really like to think or exert themselves
+- people have other things to worry about on the most part, so here is making the longer term more legible
+
+---
+
 Nowadays, I'm much more interested in myself as a tool in making these systems better than myself as a particular winner within the system. In working as a professional designer in a large company, I've realized that design and technology have powerful influence over our everyday experience.
 
 I want to combine my skills in building and making, my talent of seeing the bigger picture, and love of helping others.
 
 My concentration will be entitled Visualizing Human Narratives. I will be looking at data and storytelling through the lenses and disciplines of art, design, technology, and biology. How do we make sense of the world? What are the stories we tell ourselves?
 
-To finish up my degree, I will pursue classes which interest me and which explore the human condition. I will be working fulltime at my corporate Big Girl job whilst at Gallatin.
+To finish up my degree, I will pursue classes which interest me and which explore the human condition.
 
-I've shifted from being inwardly focused, like a microscope, to being generative. I suppose part of the Gallatin process will be figuring out is a sufficient new analogy for me. 
+I've shifted from being inwardly focused, like a microscope, to being generative. 
 
-I am inspired by win-win situations. I am interested in building tools and systems. I am interested in analyzing humanity's origins (which many would argue is precipitated by tools) and directing where we can go in the future.
+I am inspired by win-win situations. I am interested in building tools and systems. I am interested in analyzing humanity's origins (which many would argue is precipitated by tools and art) and directing where we can go in the future.
 
-Working in the tech industry and leading the NYC collegiate tech community has taught me about the problematic culture in tech at the moment. In fact, the swagger feels like me, as a Freshman. I think we can change the thinking without similar catastrophes occuring. The tech industry is correct in assuming it will shape the future. I want to challenge some of the problematic foundations, so we don't build a future disaster.
+Working in the tech industry and leading the NYC collegiate tech community has taught me about the problematic culture in tech at the moment. In fact, the swagger feels like me, as a Freshman. And yet there is so much potential. I think we can change the thinking without similar catastrophes occurring. The tech industry is correct in assuming it will shape the future. I want to challenge some of the problematic foundations, so we don't build a future disaster.
 
 We forget in all the buzzword talk about "big data" and "artificial intelligence" that technology (in the narrow sense) is just another [[cool branch]] of technology as tools. I mean this in the sense that tools are built to support humanity, to help us realize our great imaginative potential. We forget that big data is comprised of many small datapoints of individual human stories.
 
 I want to both explore these human stories for their own sake as interesting data, as well as leverage my work as a cultural critique.
+
+Visual representation is a powerful and immediate way to communicate - it marks the advent of humanity. Code and design are ways to amplify the messages of art through democratization. Analogies and systems.
 
 ~~~
 
